@@ -1,0 +1,30 @@
+""" PROBLEM STATEMENT
+Given an array/list 'ARR' of integers and a position ‘M’. You have to reverse the array after that position.
+
+Example:
+
+We have an array ARR = {1, 2, 3, 4, 5, 6} and M = 3 , considering 0 
+based indexing so the subarray {5, 6} will be reversed and our 
+output array will be {1, 2, 3, 4, 6, 5}.
+Input Format:
+The very first line of input contains an integer ‘T’ denoting the number of test cases. 
+
+The first line of every test case contains one integer ‘N’ where ‘N’ denotes the number of elements and an integer ‘M’ which denotes after which position the array has to be reversed.
+
+The second line of every test case contains ‘N’ space-separated integers which denote the elements of input of array/list.
+Output Format:
+For each test case, return the required array.
+
+Output for each test case is printed on a separate line."""
+
+Solution:
+
+def reverseArray(arr, m):
+    a1 = arr[:m+1]
+    for i in range(m+1,len(arr)):
+        p = arr.pop()
+        a1.append(p)
+    return a1
+    
+ Time complexity: O(n-m)
+ Space Complecity: O(n)
